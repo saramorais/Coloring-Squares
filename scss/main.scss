@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Delius');
+body {
+  margin: 0;
+  paddin: 0;
+  text-align: right;
+  background-image: url("./img/paper.png");
+  font-family: 'Delius', cursive;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+  color: #696969;
+}
+
+.container {
+  position: relative;
+  display: block;
+  width: 610px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
+  background: -webkit-linear-gradient(pink, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.white {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  float: left;
+  margin: 0;
+  padding: 0;
+  backgroun-color: white;
+}
+.pink, .red, .blue, .green, .brown, .black, .yellow {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.pink {
+  background-color: magenta;
+  color: pink;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.brown {
+  background-color: #3F250B;
+}
+.black {
+  background-color: black;
+}
+.yellow {
+  background-color: #DAA520;
+}
+
+.colors {
+  cursor: pointer;
+  font-weight: bold;
+}
+.select-pink {
+  color: magenta;
+}
+.select-red {
+  color: red;
+}
+.select-yellow {
+  color: #DAA520;
+}
+.select-blue {
+  color: blue;
+}
+.select-green {
+  color: green;
+}
+.select-brown {
+  color: brown;
+}
+.select-black {
+  color: black;
+}
+
+@media screen and (max-width: 440px) {
+
+}
