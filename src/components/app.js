@@ -20,8 +20,8 @@ export default class App extends Component {
     return (
       <div className="container">
         <h1 className="title">Coloring Squares</h1>
-        <Outbox color={this.state.colorSelected} />
         <Colors colorSelect={this.changeColor} />
+        <Outbox color={this.state.colorSelected} />
       </div>
     );
   }

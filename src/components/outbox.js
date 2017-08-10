@@ -14,7 +14,7 @@ export default class Outbox extends Component {
       boxes.push(<Inbox key={i} color={this.props.color} />)
     }
     return (
-      <div>
+      <div className="inbox">
         {boxes}
       </div>
     )
@@ -22,7 +22,7 @@ export default class Outbox extends Component {
 
   render() {
     return (
-      <div>
+      <div className="outbox">
         {this.renderInboxes()}
       </div>
     )
