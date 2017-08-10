@@ -10,22 +10,13 @@ h1 {
   margin: 0;
   padding: 10px 0;
   text-align: center;
-  background: -webkit-linear-gradient(pink, blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #1E90FF;
 }
+
 p {
   margin: 0;
   padding: 0;
   text-align: center;
-}
-.container {
-  /*position: relative;
-  display: block;
-  width: 610px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;*/
 }
 
 .white {
@@ -38,6 +29,7 @@ p {
   padding: 0;
   backgroun-color: white;
 }
+
 .pink, .red, .blue, .green, .brown, .black, .yellow {
   display: inline-block;
   width: 30px;
@@ -47,25 +39,32 @@ p {
   margin: 0;
   padding: 0;
 }
+
 .pink {
   background-color: magenta;
   color: pink;
 }
+
 .red {
   background-color: red;
 }
+
 .blue {
   background-color: #1E90FF;
 }
+
 .green {
   background-color: #2E8B57;
 }
+
 .brown {
   background-color: #8B4513;
 }
+
 .black {
   background-color: black;
 }
+
 .yellow {
   background-color: #DAA520;
 }
@@ -73,7 +72,7 @@ p {
 .colors {
   postion: relative;
   diplay: block;
-  width: 608px;
+  width: 100%;
   height: auto;
   cursor: pointer;
   font-weight: bold;
@@ -92,21 +91,27 @@ p {
 .select-pink {
   color: magenta;
 }
+
 .select-red {
   color: red;
 }
+
 .select-yellow {
   color: #DAA520;
 }
+
 .select-blue {
   color: #1E90FF;
 }
+
 .select-green {
   color: #2E8B57;
 }
+
 .select-brown {
   color: #8B4513;
 }
+
 .select-black {
   color: black;
 }
@@ -114,17 +119,51 @@ p {
 .outbox {
   position: relative;
   display: block;
-  width: 608px;
-  height: 608px;
+  width: 576px;
+  height: 576px;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid black;
 }
 
 .inbox {
   position: relative;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 600px) {
+  .colors {
+    width: 80%;
+  }
+  .white {
+    width: 19px;
+    height: 19px;
+  }
 
+  .pink, .red, .blue, .green, .brown, .black, .yellow {
+    width: 19px;
+    height: 19px;
+  }
+
+  .outbox {
+    width: 378px;
+    height: 378px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .white {
+    width: 15px;
+    height: 15px;
+  }
+
+  .pink, .red, .blue, .green, .brown, .black, .yellow {
+    width: 15px;
+    height: 15px;
+  }
+
+  .outbox {
+    width: 306px;
+    height: 306px;
+  }
 }

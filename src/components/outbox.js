@@ -10,7 +10,7 @@ export default class Outbox extends Component {
 
   renderInboxes() {
     var boxes = [];
-    for(var i = 0; i < 323; i ++) {
+    for(var i = 0; i < 324; i ++) {
       boxes.push(<Inbox key={i} color={this.props.color} />)
     }
     return (
