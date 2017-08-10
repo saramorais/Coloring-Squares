@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Delius');
+@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
 body {
   margin: 0;
   paddin: 0;
   background-image: url("./img/paper.png");
-  font-family: 'Delius', cursive;
+  font-family: 'Walter Turncoat', cursive;
 }
 
 h1 {
@@ -114,6 +114,12 @@ p {
 
 .select-black {
   color: black;
+}
+
+.select-white {
+  color: white;
+  background: #1E90FF;
+  padding: 0 5px;
 }
 
 .outbox {
