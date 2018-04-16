@@ -7,7 +7,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      colorSelected: "white"
+      colorSelected: "blue"
     }
     this.changeColor = this.changeColor.bind(this);
   }
@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="title">Coloring Squares</h1>
+        <h1 className="title" className={this.state.colorSelected}>Coloring Squares</h1>
         <Colors colorSelect={this.changeColor} />
         <Outbox color={this.state.colorSelected} />
       </div>

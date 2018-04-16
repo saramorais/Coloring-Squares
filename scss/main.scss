@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+
+$break-medium: 600px;
+$break-small: 400px;
+
 body {
   margin: 0;
   paddin: 0;
@@ -7,66 +11,50 @@ body {
 }
 
 h1 {
-  margin: 0;
-  padding: 10px 0;
+  margin: 10px auto;
+  padding: 5px 0;
   text-align: center;
   color: #1E90FF;
 }
 
 p {
-  margin: 0;
+  margin: 15px auto;
   padding: 0;
   text-align: center;
 }
 
 .white {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border: 1px solid black;
-  float: left;
-  margin: 0;
-  padding: 0;
-  backgroun-color: white;
-}
-
-.pink, .red, .blue, .green, .brown, .black, .yellow {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border: 1px solid black;
-  float: left;
-  margin: 0;
-  padding: 0;
+  color: #FFFFFF;
+  background-color: #1E90FF;
+  width: 300px;
 }
 
 .pink {
-  background-color: magenta;
-  color: pink;
+  color: #FF00FF;
 }
 
 .red {
-  background-color: red;
+  color: #FF0000;
 }
 
 .blue {
-  background-color: #1E90FF;
+  color: #1E90FF;
 }
 
 .green {
-  background-color: #2E8B57;
+  color: #2E8B57;
 }
 
 .brown {
-  background-color: #8B4513;
+  color: #8B4513;
 }
 
 .black {
-  background-color: black;
+  color: #000000;
 }
 
 .yellow {
-  background-color: #DAA520;
+  color: #DAA520;
 }
 
 .colors {
@@ -74,52 +62,56 @@ p {
   diplay: block;
   width: 100%;
   height: auto;
-  cursor: pointer;
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-}
 
-.select {
-  display: inline-block;
-  margin-top: 5px;
-  margin-right: 15px;
-  text-align: center;
-}
+  @media screen and (max-width: $break-medium) {
+    width: 80%;
+  }
 
-.select-pink {
-  color: magenta;
-}
+  .select {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 15px;
+    text-align: center;
+    cursor: pointer;
+  }
 
-.select-red {
-  color: red;
-}
+  .select-pink {
+    color: #FF00FF;
+  }
 
-.select-yellow {
-  color: #DAA520;
-}
+  .select-red {
+    color: #FF0000;
+  }
 
-.select-blue {
-  color: #1E90FF;
-}
+  .select-yellow {
+    color: #DAA520;
+  }
 
-.select-green {
-  color: #2E8B57;
-}
+  .select-blue {
+    color: #1E90FF;
+  }
 
-.select-brown {
-  color: #8B4513;
-}
+  .select-green {
+    color: #2E8B57;
+  }
 
-.select-black {
-  color: black;
-}
+  .select-brown {
+    color: #8B4513;
+  }
 
-.select-white {
-  color: white;
-  background: #1E90FF;
-  padding: 0 5px;
+  .select-black {
+    color: #000000;
+  }
+
+  .select-white {
+    color: #FFFFFF;
+    background: #1E90FF;
+    padding: 0 5px;
+  }
 }
 
 .outbox {
@@ -127,49 +119,72 @@ p {
   display: block;
   width: 576px;
   height: 576px;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;
-}
 
-.inbox {
-  position: relative;
-}
-
-@media screen and (max-width: 600px) {
-  .colors {
-    width: 80%;
-  }
-  .white {
-    width: 19px;
-    height: 19px;
-  }
-
-  .pink, .red, .blue, .green, .brown, .black, .yellow {
-    width: 19px;
-    height: 19px;
-  }
-
-  .outbox {
+  @media screen and (max-width: $break-medium) {
     width: 378px;
     height: 378px;
   }
-}
-
-@media screen and (max-width: 400px) {
-  .white {
-    width: 15px;
-    height: 15px;
-  }
-
-  .pink, .red, .blue, .green, .brown, .black, .yellow {
-    width: 15px;
-    height: 15px;
-  }
-
-  .outbox {
+  @media screen and (max-width: $break-small) {
     width: 306px;
-    height: 306px;
+    height: 306px; 
+  }
+
+  .inbox {
+    position: relative;
+
+    .pink, .red, .blue, .green, .brown, .black, .yellow, .white {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      float: left;
+      margin: 0;
+      padding: 0;
+
+      @media screen and (max-width: $break-medium) {
+        width: 19px;
+        height: 19px;
+      }
+      @media screen and (max-width: $break-small) {
+        width: 15px;
+        height: 15px;   
+      }
+    }
+
+    .white {
+      background-color: rgba(255,255,255,0);
+    }
+
+    .pink {
+      background-color: #FF00FF;
+    }
+
+    .red {
+      background-color: #FF0000;
+    }
+
+    .blue {
+      background-color: #1E90FF;
+    }
+
+    .green {
+      background-color: #2E8B57;
+    }
+
+    .brown {
+      background-color: #8B4513;
+    }
+
+    .black {
+      background-color: #000000;
+    }
+
+    .yellow {
+      background-color: #DAA520;
+    }
   }
 }

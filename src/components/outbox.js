@@ -1,31 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import Inbox from "./inbox";
 
-export default class Outbox extends Component {
+function Outbox(props) {
 
-  constructor(props) {
-    super(props);
-    this.renderInboxes = this.renderInboxes.bind(this);
+  var boxes = [];
+  for(var i = 0; i < 324; i ++) {
+    boxes.push(<Inbox key={i} color={props.color} />)
   }
-
-  renderInboxes() {
-    var boxes = [];
-    for(var i = 0; i < 324; i ++) {
-      boxes.push(<Inbox key={i} color={this.props.color} />)
-    }
-    return (
+  return (
+    <div className="outbox">
       <div className="inbox">
         {boxes}
       </div>
-    )
-  }
-
-  render() {
-    return (
-      <div className="outbox">
-        {this.renderInboxes()}
-      </div>
-    )
-  }
-
+    </div>
+  );
 }
+
+export default Outbox;

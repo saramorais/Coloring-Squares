@@ -1,20 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Inbox extends Component {
-
-  constructor(props) {
-    super(props);
-    this.changeBoxColor = this.changeBoxColor.bind(this);
+function Inbox(props) {
+  const changeBoxColor = function(e) {
+    e.target.className = props.color;
   }
-
-  changeBoxColor(e) {
-    e.target.className = this.props.color;
-  }
-
-  render() {
-    return (
-      <div className="white" onClick={this.changeBoxColor}></div>
-    );
-  }
-
+  return (
+    <div className="white" onClick={changeBoxColor}></div>
+  );
 }
+
+export default Inbox;
